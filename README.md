@@ -49,11 +49,5 @@ curl http://localhost:8080/
   "current_datetime": "2025-01-30T09:30:00Z",
   "github_url": "https://github.com/valleon6/hng-stage-0-backend-task-2024.git"
 }
-
-Related Links
-	•	Hire Python Developers
-	•	Hire C# Developers
-	•	Hire Golang Developers
-	•	Hire PHP Developers
 	•	Hire Java Developers
-	•	Hire Node.js Developers
+	
