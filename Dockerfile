@@ -1,5 +1,5 @@
-# Use an official Maven image with OpenJDK 21 to build the app
-FROM maven:3.8.1-openjdk-21 AS builder
+# Use an official Maven image with OpenJDK 17 to build the app
+FROM maven:3.8.6-openjdk-17 AS builder
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -10,8 +10,8 @@ COPY . /app
 # Build the app (this generates the target/ directory and .jar file)
 RUN mvn clean install -DskipTests
 
-# Use Amazon Corretto 21 as a minimal JDK to run the app
-FROM amazoncorretto:21-alpine
+# Use Amazon Corretto 17 as a minimal JDK to run the app
+FROM amazoncorretto:17-alpine
 
 # Set the working directory inside the container
 WORKDIR /app
