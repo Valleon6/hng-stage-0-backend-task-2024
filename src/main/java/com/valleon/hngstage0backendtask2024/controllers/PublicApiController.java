@@ -2,6 +2,7 @@ package com.valleon.hngstage0backendtask2024.controllers;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.Instant;
@@ -12,9 +13,10 @@ import java.util.Map;
 
 @RestController
 @CrossOrigin(origins = "*")
+@RequestMapping("/")
 public class PublicApiController {
 
-    @GetMapping("/")
+    @GetMapping("get-info")
     public Map<String, String> getInfo() {
         Map<String, String> response = new HashMap<>();
         response.put("email", "val.ekechukwu@gmail.com");
