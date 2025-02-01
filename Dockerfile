@@ -1,5 +1,5 @@
-# Use an official Maven image with OpenJDK 17 to build the app
-FROM maven:3.8.6-jdk-17 AS builder
+# Use an official Maven image with Eclipse Temurin 17 to build the app
+FROM maven:3.8.6-eclipse-temurin-17 AS builder
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -10,8 +10,8 @@ COPY . /app
 # Build the app (this generates the target/ directory and .jar file)
 RUN mvn clean install -DskipTests
 
-# Use Amazon Corretto 17 as a minimal JDK to run the app
-FROM amazoncorretto:17
+# Use Eclipse Temurin 17 as a minimal JDK to run the app
+FROM eclipse-temurin:17-alpine
 
 # Set the working directory inside the container
 WORKDIR /app
